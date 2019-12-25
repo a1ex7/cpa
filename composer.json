@@ -1,0 +1,44 @@
+{
+    "name": "a1ex7/cpa",
+    "description": "Laravel CPA (Cost Per Action) network integration package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ta1ex7",
+            "email": "ta-lex@mail.ru",
+            "homepage": "https://github.com/a1ex7"
+        }
+    ],
+    "minimum-stability": "dev",
+    "homepage": "https://github.com/a1ex7/cpa",
+    "keywords": ["Laravel", "Cpa", "cost per action", "sales doubler", "storm digital", "admitad", "leads su", "do affiliate", "credy", "papa karlo", "fin line", "lead gid"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "A1ex7\\Cpa\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "A1ex7\\Cpa\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "A1ex7\\Cpa\\CpaServiceProvider"
+            ],
+            "aliases": {
+                "Cpa": "A1ex7\\Cpa\\Facades\\Cpa"
+            }
+        }
+    }
+}
