@@ -3,7 +3,7 @@
 
 namespace A1ex7\Cpa\Conversion;
 
-use A1ex7\Cpa;
+use A1ex7\Cpa\Providers;
 use A1ex7\Cpa\Lead\LeadSource;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
@@ -33,57 +33,57 @@ class SendServiceFactory
     {
         $this->senders = [
             LeadSource::SALES_DOUBLER => [
-                'class'  => Cpa\SalesDoubler\SendService::class,
+                'class'  => Providers\SalesDoubler\SendService::class,
                 'config' => [
-                    'class' => Cpa\SalesDoubler\EnvironmentConfig::class,
+                    'class' => Providers\SalesDoubler\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::DO_AFFILIATE => [
-                'class'  => Cpa\DoAffiliate\SendService::class,
+                'class'  => Providers\DoAffiliate\SendService::class,
                 'config' => [
-                    'class' => Cpa\DoAffiliate\EnvironmentConfig::class,
+                    'class' => Providers\DoAffiliate\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::LEADS_SU => [
-                'class'  => Cpa\LeadsSu\SendService::class,
+                'class'  => Providers\LeadsSu\SendService::class,
                 'config' => [
-                    'class' => Cpa\LeadsSu\EnvironmentConfig::class,
+                    'class' => Providers\LeadsSu\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::FIN_LINE => [
-                'class'  => Cpa\FinLine\SendService::class,
+                'class'  => Providers\FinLine\SendService::class,
                 'config' => [
-                    'class' => Cpa\FinLine\EnvironmentConfig::class,
+                    'class' => Providers\FinLine\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::PAPA_KARLO => [
-                'class'  => Cpa\PapaKarlo\SendService::class,
+                'class'  => Providers\PapaKarlo\SendService::class,
                 'config' => [
-                    'class' => Cpa\PapaKarlo\EnvironmentConfig::class,
+                    'class' => Providers\PapaKarlo\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::STORM_DIGITAL => [
-                'class'  => Cpa\StormDigital\SendService::class,
+                'class'  => Providers\StormDigital\SendService::class,
                 'config' => [
-                    'class' => Cpa\StormDigital\EnvironmentConfig::class,
+                    'class' => Providers\StormDigital\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::ADMITAD => [
-                'class'  => Cpa\AdmitAd\SendService::class,
+                'class'  => Providers\AdmitAd\SendService::class,
                 'config' => [
-                    'class' => Cpa\AdmitAd\EnvironmentConfig::class,
+                    'class' => Providers\AdmitAd\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::LEAD_GID => [
-                'class'  => Cpa\LeadGid\SendService::class,
+                'class'  => Providers\LeadGid\SendService::class,
                 'config' => [
-                    'class' => Cpa\LeadGid\EnvironmentConfig::class,
+                    'class' => Providers\LeadGid\EnvironmentConfig::class,
                 ],
             ],
             LeadSource::CREDY => [
-                'class'  => Cpa\Credy\SendService::class,
+                'class'  => Providers\Credy\SendService::class,
                 'config' => [
-                    'class' => Cpa\Credy\EnvironmentConfig::class,
+                    'class' => Providers\Credy\EnvironmentConfig::class,
                 ],
             ],
         ];

@@ -22,15 +22,15 @@ class ParsersFactory
     public function __construct()
     {
         $this->parsers = [
-            LeadSource::ADMITAD       => Cpa\AdmitAd\Lead\Parser::class,
-            LeadSource::CREDY         => Cpa\Credy\Lead\Parser::class,
-            LeadSource::DO_AFFILIATE  => Cpa\DoAffiliate\Lead\Parser::class,
-            LeadSource::FIN_LINE      => Cpa\FinLine\Lead\Parser::class,
-            LeadSource::LEAD_GID      => Cpa\LeadGid\Lead\Parser::class,
-            LeadSource::LEADS_SU      => Cpa\LeadsSu\Lead\Parser::class,
-            LeadSource::PAPA_KARLO    => Cpa\PapaKarlo\Lead\Parser::class,
-            LeadSource::SALES_DOUBLER => Cpa\SalesDoubler\Lead\Parser::class,
-            LeadSource::STORM_DIGITAL => Cpa\StormDigital\Lead\Parser::class,
+            LeadSource::ADMITAD       => Cpa\Providers\AdmitAd\Lead\Parser::class,
+            LeadSource::CREDY         => Cpa\Providers\Credy\Lead\Parser::class,
+            LeadSource::DO_AFFILIATE  => Cpa\Providers\DoAffiliate\Lead\Parser::class,
+            LeadSource::FIN_LINE      => Cpa\Providers\FinLine\Lead\Parser::class,
+            LeadSource::LEAD_GID      => Cpa\Providers\LeadGid\Lead\Parser::class,
+            LeadSource::LEADS_SU      => Cpa\Providers\LeadsSu\Lead\Parser::class,
+            LeadSource::PAPA_KARLO    => Cpa\Providers\PapaKarlo\Lead\Parser::class,
+            LeadSource::SALES_DOUBLER => Cpa\Providers\SalesDoubler\Lead\Parser::class,
+            LeadSource::STORM_DIGITAL => Cpa\Providers\StormDigital\Lead\Parser::class,
             // add all needed parsers here
         ];
     }
