@@ -33,8 +33,4 @@ trait SendServiceTrait
 
     abstract protected function getRequest(Conversion $conversion, array $params): Request;
 
-//    public function isExist(Conversion $conversion)
-//    {
-//
-//    }
 }
