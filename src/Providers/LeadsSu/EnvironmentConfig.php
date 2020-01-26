@@ -2,7 +2,7 @@
 
 namespace A1ex7\Cpa\Providers\LeadsSu;
 
-use A1ex7\Cpa\EnvironmentConfigTrait;
+use A1ex7\Cpa\Traits\EnvironmentConfigTrait;
 
 class EnvironmentConfig
 {

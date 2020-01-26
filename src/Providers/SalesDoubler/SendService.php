@@ -2,9 +2,9 @@
 
 namespace A1ex7\Cpa\Providers\SalesDoubler;
 
-use A1ex7\Cpa\Conversion\SendServiceTrait;
 use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
 use A1ex7\Cpa\Models\Conversion;
+use A1ex7\Cpa\Traits\SendServiceTrait;
 use GuzzleHttp\Psr7\Request;
 
 class SendService implements SendServiceInterface

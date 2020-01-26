@@ -5,7 +5,7 @@ namespace A1ex7\Cpa\Providers\DoAffiliate\Lead;
 
 use A1ex7\Cpa\Interfaces\Lead\LeadParser;
 use A1ex7\Cpa\Lead\LeadInfo;
-use A1ex7\Cpa\Lead\Parser\QueryParams;
+use A1ex7\Cpa\Traits\QueryParams;
 
 class Parser implements LeadParser
 {

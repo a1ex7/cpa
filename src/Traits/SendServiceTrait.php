@@ -1,7 +1,8 @@
 <?php
 
-namespace A1ex7\Cpa\Conversion;
+namespace A1ex7\Cpa\Traits;
 
+use A1ex7\Cpa\Conversion\Postback;
 use A1ex7\Cpa\Models\Conversion;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;

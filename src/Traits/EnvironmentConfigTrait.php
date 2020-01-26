@@ -1,6 +1,6 @@
 <?php
 
-namespace A1ex7\Cpa;
+namespace A1ex7\Cpa\Traits;
 
 trait EnvironmentConfigTrait
 {

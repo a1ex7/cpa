@@ -1,6 +1,6 @@
 <?php
 
-namespace A1ex7\Cpa\Lead\Parser;
+namespace A1ex7\Cpa\Traits;
 
 trait QueryParams
 {
