@@ -5,7 +5,7 @@ inspired by wearesho-team/bobra-cpa
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
 
-![laravel cpa](logo_transparent.png)
+![laravel cpa](logo.png)
 
 Laravel Package for [CPA](https://en.wikipedia.org/wiki/Cost_per_action) networks integration and target customer actions registration in your application.
 Currently supported: [Admitad](https://www.admitad.com/ru/), [Credy](https://www.credy.com/), [DoAffiliate](https://www.doaffiliate.net/), [Finline](https://finline.ua/),
