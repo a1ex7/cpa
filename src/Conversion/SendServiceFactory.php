@@ -3,8 +3,9 @@
 
 namespace A1ex7\Cpa\Conversion;
 
+use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Providers;
-use A1ex7\Cpa\Lead\LeadSource;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -92,8 +93,8 @@ class SendServiceFactory
     }
 
     /**
+     * @return \A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface|null
      * @var SendServiceInterface $sender
-     * @return SendServiceInterface|null
      */
     public function create()
     {

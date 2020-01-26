@@ -2,8 +2,8 @@
 
 namespace A1ex7\Cpa\Lead\Parser;
 
+use A1ex7\Cpa\Interfaces\Lead\LeadParser;
 use A1ex7\Cpa\Lead\LeadInfo;
-use A1ex7\Cpa\Lead\LeadParser;
 
 class Chain implements LeadParser
 {

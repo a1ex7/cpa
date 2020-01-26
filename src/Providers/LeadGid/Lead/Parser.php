@@ -3,9 +3,9 @@
 namespace A1ex7\Cpa\Providers\LeadGid\Lead;
 
 
+use A1ex7\Cpa\Interfaces\Lead\LeadParser;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Lead\LeadInfo;
-use A1ex7\Cpa\Lead\LeadParser;
-use A1ex7\Cpa\Lead\LeadSource;
 use A1ex7\Cpa\Lead\Parser\QueryParams;
 
 class Parser implements LeadParser

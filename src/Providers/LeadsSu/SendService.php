@@ -2,8 +2,8 @@
 
 namespace A1ex7\Cpa\Providers\LeadsSu;
 
-use A1ex7\Cpa\Conversion\SendServiceInterface;
 use A1ex7\Cpa\Conversion\SendServiceTrait;
+use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
 use A1ex7\Cpa\Models\Conversion;
 use GuzzleHttp\Psr7\Request;
 

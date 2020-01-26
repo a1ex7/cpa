@@ -2,9 +2,9 @@
 
 namespace A1ex7\Cpa\Lead;
 
+use A1ex7\Cpa\Interfaces\Lead\LeadParser;
 use A1ex7\Cpa\Models\CpaCookie;
 use A1ex7\Cpa\Models\Lead;
-use Exception;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Cookie;

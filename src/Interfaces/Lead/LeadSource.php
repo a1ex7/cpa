@@ -1,6 +1,6 @@
 <?php
 
-namespace A1ex7\Cpa\Lead;
+namespace A1ex7\Cpa\Interfaces\Lead;
 
 /**
  * Interface Source

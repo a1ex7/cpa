@@ -4,8 +4,8 @@
 namespace A1ex7\Cpa\Lead\Parser;
 
 use A1ex7\Cpa;
-use A1ex7\Cpa\Lead\LeadParser;
-use A1ex7\Cpa\Lead\LeadSource;
+use A1ex7\Cpa\Interfaces\Lead\LeadParser;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 

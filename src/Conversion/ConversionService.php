@@ -2,11 +2,9 @@
 
 namespace A1ex7\Cpa\Conversion;
 
-use A1ex7\Cpa;
-use A1ex7\Cpa\Lead\LeadSource;
+use A1ex7\Cpa\Interfaces\Conversion\ServiceInterface;
 use A1ex7\Cpa\Lead\LeadService;
 use A1ex7\Cpa\Models\Conversion;
-use App\Models\GlobalLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Log;

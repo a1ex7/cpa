@@ -4,11 +4,9 @@ namespace A1ex7\Cpa\Providers\SalesDoubler\Lead;
 
 
 use A1ex7\Cpa\Lead\LeadInfo;
-use A1ex7\Cpa\Lead\LeadParser;
-use A1ex7\Cpa\Lead\LeadSource;
 use A1ex7\Cpa\Lead\Parser\QueryParams;
 
-class Parser implements LeadParser
+class Parser implements \A1ex7\Cpa\Interfaces\Lead\LeadParser
 {
     use QueryParams;
 
@@ -30,7 +28,7 @@ class Parser implements LeadParser
         }
 
         return new LeadInfo(
-            LeadSource::SALES_DOUBLER,
+            \A1ex7\Cpa\Interfaces\Lead\LeadSource::SALES_DOUBLER,
             [
                 'clickId' => $query[static::AFF_SUB],
                 'aid'     => $query[static::AFF_ID] ?? $query['utm_campaign'] ?? null,

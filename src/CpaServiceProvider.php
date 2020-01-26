@@ -3,7 +3,7 @@
 namespace A1ex7\Cpa;
 
 use A1ex7\Cpa\Conversion\ConversionService;
-use A1ex7\Cpa\Lead\LeadParser;
+use A1ex7\Cpa\Interfaces\Lead\LeadParser;
 use A1ex7\Cpa\Lead\LeadService;
 use A1ex7\Cpa\Lead\Parser\Chain;
 use Illuminate\Support\ServiceProvider;

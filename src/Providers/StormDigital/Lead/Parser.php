@@ -4,11 +4,9 @@ namespace A1ex7\Cpa\Providers\StormDigital\Lead;
 
 
 use A1ex7\Cpa\Lead\LeadInfo;
-use A1ex7\Cpa\Lead\LeadParser;
-use A1ex7\Cpa\Lead\LeadSource;
 use A1ex7\Cpa\Lead\Parser\QueryParams;
 
-class Parser implements LeadParser
+class Parser implements \A1ex7\Cpa\Interfaces\Lead\LeadParser
 {
     use QueryParams;
 
@@ -27,7 +25,7 @@ class Parser implements LeadParser
         }
 
         return new LeadInfo(
-            LeadSource::STORM_DIGITAL,
+            \A1ex7\Cpa\Interfaces\Lead\LeadSource::STORM_DIGITAL,
             [
                 'clickId' => $query[static::AFF_SUB],
                 'pid'     => $query[static::AFF_ID] ?? null,

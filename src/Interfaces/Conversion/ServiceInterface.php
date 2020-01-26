@@ -1,6 +1,6 @@
 <?php
 
-namespace A1ex7\Cpa\Conversion;
+namespace A1ex7\Cpa\Interfaces\Conversion;
 
 use A1ex7\Cpa\Models\Conversion;
 
