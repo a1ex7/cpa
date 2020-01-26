@@ -17,10 +17,7 @@ class CpaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'a1ex7');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'a1ex7');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
@@ -67,23 +64,5 @@ class CpaServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/cpa.php' => config_path('cpa.php'),
         ], 'cpa.config');
-
-        // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/a1ex7'),
-        ], 'cpa.views');*/
-
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/a1ex7'),
-        ], 'cpa.views');*/
-
-        // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/a1ex7'),
-        ], 'cpa.views');*/
-
-        // Registering package commands.
-        // $this->commands([]);
     }
 }
