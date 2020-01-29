@@ -29,9 +29,12 @@ class ConversionService implements ServiceInterface
 
 
     /**
-     * @param Model|int|string $leadModel
-     * @param string $conversionId
-     * @param string $event
+     * Register conversion when goal is achieved
+     * e.g. register 'sale' or 'register' event
+     *
+     * @param Model|int|string $leadModel user who performs target action
+     * @param string $conversionId internal conversion Id, for example orderId or userId
+     * @param string $event registered event (declared in config)
      * @return Conversion|null
      */
     public function register($leadModel, string $conversionId, string $event): ?Conversion

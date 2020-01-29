@@ -28,8 +28,10 @@ class LeadService
     }
 
     /**
+     * Convert user to Lead when he visited referral link
+     *
      * @param  Model|int|string $model
-     * @param  string|array  $urls
+     * @param  string|array $urls
      * @return Lead|null
      */
     public function create($model, $urls): ?Lead
@@ -64,6 +66,9 @@ class LeadService
     }
 
     /**
+     * Convert guests to Lead when they visited referral link
+     * for guest we just store lead info to cookie
+     *
      * @param string $url request full url
      * @return Model|null
      */
@@ -94,6 +99,9 @@ class LeadService
     }
 
     /**
+     * When user authorized we get Lead info from
+     * cookie and convert user to Lead
+     *
      * @param  Model|int|string  $model
      * @return Lead|null
      */
@@ -137,6 +145,8 @@ class LeadService
     }
 
     /**
+     * Get Lead Info for current user stored by last visited cpa link
+     *
      * @param  Model|int|string  $model
      * @return Lead|null
      */
