@@ -8,9 +8,16 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Str;
 
 trait SendServiceTrait
 {
+    /*
+     * CPA Network source
+     *
+     * */
+    public $source;
     /**
      * @param  Conversion  $conversion
      * @param  array  $params
@@ -32,6 +39,26 @@ trait SendServiceTrait
         return new Postback($request, $response);
     }
 
+    /**
+     * Get CPA network source domain from config
+     *
+     * @return string
+     */
+    public function getDomain(): string
+    {
+        return Config::get(Str::snake($this->getSource()));
+    }
+
     abstract protected function getRequest(Conversion $conversion, array $params): Request;
+
+    /**
+     * Get CPA Network source string
+     *
+     * @return string
+     */
+    public function getSource(): string
+    {
+        return $this->source;
+    }
 
 }

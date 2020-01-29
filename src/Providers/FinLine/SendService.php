@@ -3,6 +3,7 @@
 namespace A1ex7\Cpa\Providers\FinLine;
 
 use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Models\Conversion;
 use A1ex7\Cpa\Traits\SendServiceTrait;
 use GuzzleHttp\Psr7\Request;
@@ -14,6 +15,8 @@ class SendService implements SendServiceInterface
     public const STATUS_APPROVED = 1;
     public const STATUS_PENDING  = 2;
     public const STATUS_DECLINED = 3;
+
+    public $source = LeadSource::FIN_LINE;
 
     /**
      * @var EnvironmentConfig
@@ -45,7 +48,7 @@ class SendService implements SendServiceInterface
             'status'    => $status ?? self::STATUS_PENDING,
         ]);
 
-        $url = "http://offers.finline.affise.com/postback?{$queryParams}";
+        $url = "{$this->getDomain()}/postback?{$queryParams}";
 
         return new Request('get', $url);
     }

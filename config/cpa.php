@@ -75,6 +75,26 @@ return [
         'storm_digital' => false,
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | CPA network domains
+    |--------------------------------------------------------------------------
+    |
+    | Specify domains for send cpa network post back
+    |
+    */
+    'domains' => [
+        'admitad'       => 'https://ad.admitad.com',
+        'credy'         => 'http://tracking.credy.eu',
+        'do_affiliate'  => 'http://tracker2.doaffiliate.net',
+        'fin_line'      => 'http://offers.finline.affise.com',
+        'lead_gid'      => 'http://go.leadgid.ru',
+        'leads_su'      => 'http://api.leads.su',
+        'papa_karlo'    => 'http://targetme.go2cloud.org',
+        'sales_doubler' => 'http://rdr.salesdoubler.com.ua',
+        'storm_digital' => 'http://offers.stormdigital.affise.com',
+    ],
+
 
     /*
     |--------------------------------------------------------------------------

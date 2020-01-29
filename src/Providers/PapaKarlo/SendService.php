@@ -3,6 +3,7 @@
 namespace A1ex7\Cpa\Providers\PapaKarlo;
 
 use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Models\Conversion;
 use A1ex7\Cpa\Traits\SendServiceTrait;
 use GuzzleHttp\Psr7\Request;
@@ -10,6 +11,9 @@ use GuzzleHttp\Psr7\Request;
 class SendService implements SendServiceInterface
 {
     use SendServiceTrait;
+
+    public $source = LeadSource::PAPA_KARLO;
+
     /**
      * @var EnvironmentConfig
      */
@@ -47,7 +51,7 @@ class SendService implements SendServiceInterface
             'transaction_id' => $clickId,
         ]);
 
-        $url = "http://targetme.go2cloud.org/{$path}?{$queryParams}";
+        $url = "{$this->getDomain()}/{$path}?{$queryParams}";
 
         return new Request('get', $url);
     }

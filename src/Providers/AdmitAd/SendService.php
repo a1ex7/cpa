@@ -3,6 +3,7 @@
 namespace A1ex7\Cpa\Providers\AdmitAd;
 
 use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Models\Conversion;
 use A1ex7\Cpa\Traits\SendServiceTrait;
 use GuzzleHttp\Psr7\Request;
@@ -13,6 +14,8 @@ class SendService implements SendServiceInterface
 
     const PAYMENT_TYPE_SALE = 'sale';
     const PAYMENT_TYPE_LEAD = 'lead';
+
+    public $source = LeadSource::ADMITAD;
 
     /**
      * @var EnvironmentConfig
@@ -44,7 +47,7 @@ class SendService implements SendServiceInterface
             'payment_type'  => $params['payment_type'] ?? self::PAYMENT_TYPE_SALE,
         ]);
 
-        $url = "https://ad.admitad.com/r?{$queryParams}";
+        $url = "{$this->getDomain()}/r?{$queryParams}";
 
         return new Request('get', $url);
     }

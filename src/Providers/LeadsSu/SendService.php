@@ -3,6 +3,7 @@
 namespace A1ex7\Cpa\Providers\LeadsSu;
 
 use A1ex7\Cpa\Interfaces\Conversion\SendServiceInterface;
+use A1ex7\Cpa\Interfaces\Lead\LeadSource;
 use A1ex7\Cpa\Models\Conversion;
 use A1ex7\Cpa\Traits\SendServiceTrait;
 use GuzzleHttp\Psr7\Request;
@@ -14,6 +15,8 @@ class SendService implements SendServiceInterface
     public const STATUS_REJECTED = 'rejected';
     public const STATUS_PENDING  = 'pending';
     public const STATUS_APPROVED = 'approved';
+
+    public $source = LeadSource::LEADS_SU;
 
     /**
      * @var EnvironmentConfig
@@ -47,7 +50,7 @@ class SendService implements SendServiceInterface
             'status'         => $status,
         ]);
 
-        $url = "http://api.leads.su/advertiser/conversion/createUpdate?{$queryParams}";
+        $url = "{$this->getDomain()}/advertiser/conversion/createUpdate?{$queryParams}";
 
         return new Request('get', $url);
     }
